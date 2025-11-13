@@ -18,25 +18,25 @@ const Hero = () => {
     <main className="min-h-[calc(100svh-5.03rem)] md:flex-row flex flex-col-reverse justify-center items-center gap-4">
       {/* Left Section */}
       <section className=" max-w-3xl min-h-xl p-4 flex flex-col gap-3 m-4">
-        <p className="lg:text-3xl text-2xl font-medium">👋 Hi, I am</p>
+        <span className="text-4xl lg:text-5xl animate-wave inline-block">👋</span>
+        <p className="lg:text-3xl text-2xl font-medium">Hi, I am</p>
         <h1 className="lg:text-5xl text-4xl font-bold text-emerald-700">
           Rohan Patil
         </h1>
         <h2 className="lg:text-4xl text-3xl font-medium">
           I am a Software Developer and ML Researcher
         </h2>
-        <p className="lg:text-2xl text-lg text-gray-600">
-          I’m passionate about building impactful products that solve real-world problems — from scalable FastAPI microservices to AWS cloud automation and machine learning solutions.
-        🚀 Currently: Working at Climatescence Pvt. Ltd., developing an AI-powered Tree Detection System using AWS, FastAPI, S3, and PostgreSQL.
-        🌱 Learning: Cloud-native deployment & ML model optimization.
-        💬 Ask Me About: FastAPI · AWS S3 · PostgreSQL · Docker · QGIS · Blockchain
-        ⚡ Fun Fact: I love combining technology with sustainability 🌿
-        </p>
+        <div className="lg:text-2xl text-lg text-gray-600">
+        <div>I’m passionate about building impactful products that solve real-world problems — from scalable FastAPI microservices to AWS cloud automation and machine learning solutions.</div>
+        <div><b>Currently:</b> Developing an AI-powered Tree Detection System using AWS, FastAPI, S3, and PostgreSQL.</div>
+        <div><b>Ask Me About:</b> FastAPI · AWS S3 · PostgreSQL · Docker · QGIS · Blockchain</div>
+        <div><b>Fun Fact:</b> I love combining technology with sustainability 🌿</div>
+      </div>
 
         <section className="flex flex-col gap-6">
           {/* Social Media Icons */}
           <section className="flex items-center gap-4 mt-3">
-            {/* Linkedin */}
+            {/* Linke din */}
             <a
               href="https://www.linkedin.com/in/whorohanpatil"
               target="_blank"
