@@ -6,68 +6,60 @@ import { ThemeContext } from "./ThemeContext";
 const Navbar = () => {
    const { theme, toggleTheme } = useContext(ThemeContext);
   return (
-    <nav className="flex p-4 border-b border-gray-200 dark:border-gray-700 sticky top-0 bg-white dark:bg-gray-900 dark:text-white z-50">
-      {/* Left Section */}
-      <section className="w-2/3 md:w-1/2 p-2 text-xl md:text-2xl font-semibold flex justify-start items-center uppercase">
+    <nav className="sticky top-0 z-50 p-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-700">
+    <div className="container mx-auto flex justify-between items-center">
+      {/* Name - Always visible */}
+      <div className="text-xl font-semibold text-gray-900 dark:text-white">
         Rohan Patil
-      </section>
+      </div>
 
-      {/* Center Section */}
-      <section className=" hidden md:flex justify-end items-center p-2">
-        <ul className="flex gap-8 max-lg:gap-4 max-lg:text-sm text-gray-700 dark:text-gray-300 tracking-wider uppercase font-semibold">
-          <li className="cursor-pointer hover:text-gray-950 dark:hover:text-white hover:scale-105 hover:transition-all">
-            <a href="#" aria-label="Goto Home Section">
-              Home
-            </a>
+      {/* Desktop Navigation - Hidden on mobile */}
+      <div className="hidden md:flex items-center space-x-8">
+        <ul className="flex space-x-8 text-gray-700 dark:text-gray-300">
+          <li className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a href="#" className="font-medium">Home</a>
           </li>
-          <li className="cursor-pointer hover:text-gray-950 dark:hover:text-white hover:scale-105">
-            <a href="#about" aria-label="Goto About Section">
-              About
-            </a>
+          <li className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a href="#about" className="font-medium">About</a>
           </li>
-          <li className="cursor-pointer hover:text-gray-950 dark:hover:text-white hover:scale-105">
-            <a href="#projects" aria-label="Goto Projects Section">
-              Projects
-            </a>
+          <li className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a href="#projects" className="font-medium">Projects</a>
           </li>
-          <li className="cursor-pointer hover:text-gray-950 dark:hover:text-white hover:scale-105">
-            <a href="#contact" aria-label="Goto Contact Section">
-              Contact
-            </a>
+          <li className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+            <a href="#contact" className="font-medium">Contact</a>
           </li>
         </ul>
-      </section>
-
-      {/* Right Section */}
-      <section className="w-1/4 max-md:w-1/2 max-lg:w-1/3 flex justify-end items-center max-[375px]:hidden">
-        <Link 
-          href="mailto:rohanpatil4002@gmail.com"
-          className="flex items-center px-3 py-2 bg-emerald-700 hover:bg-emerald-800 rounded-md text-white outline-none focus:ring-1 shadow-lg transform active:scale-y-95 transition-transform mx-5"
-          aria-label="Hire Me Button"
-        >
-          <FaBriefcase />
-          <span className="ml-1.5">Hire Me</span>
-        </Link>
+        
+        {/* Theme Toggle - Desktop */}
         <button
           onClick={toggleTheme}
-          className="p-2 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 ml-2"
-          aria-label="Toggle theme"
+          className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
         >
-          {theme === "light" ? <FaMoon size={20} /> : <FaSun size={20} />}
+          {theme === 'dark' ? (
+            <FaSun className="w-5 h-5 text-yellow-400" />
+          ) : (
+            <FaMoon className="w-5 h-5 text-gray-700" />
+          )}
         </button>
+      </div>
 
-        {/* <Link href="mailto:rohanpatil4002@gmail.com">
-          <button
-            className="flex items-center px-3 py-2 bg-emerald-700 hover:bg-emerald-800 rounded-md text-white outline-none focus:ring-1 shadow-lg transform active:scale-y-95 transition-transform mx-5"
-            aria-label="Hire Me Button"
-          >
-            <FaBriefcase />
-            <span className="ml-1.5">Hire Me</span>
-          </button>
-        </Link> */}
-        
-      </section>
-    </nav>
+      {/* Mobile - Theme Toggle only */}
+      <div className="md:hidden">
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+        >
+          {theme === 'dark' ? (
+            <FaSun className="w-5 h-5 text-yellow-400" />
+          ) : (
+            <FaMoon className="w-5 h-5 text-gray-700" />
+          )}
+        </button>
+      </div>
+    </div>
+  </nav>
   );
 };
 export default Navbar;
