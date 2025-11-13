@@ -60,10 +60,6 @@ const Contact = () => {
       className="min-h-[calc(100svh-5.03rem)] lg:p-6 p-1 flex flex-col lg:gap-8 gap-4"
       id="contact"
     >
-      <section className="flex items-center gap-4 pt-2">
-        <hr className="h-1 w-12 bg-gray-600 rounded-full" />
-        <p className="text-2xl font-medium">&lt;Contact &nbsp;/&gt;</p>
-      </section>
       {/* Contact Section */}
       <section className="flex justify-center items-center gap-12">
         <section className="p-1 lg:w-1/3 max-w-fit flex items-center max-lg:hidden">
