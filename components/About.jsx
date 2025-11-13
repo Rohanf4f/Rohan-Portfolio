@@ -1,88 +1,127 @@
+"use client";
 import { FaInstagram, FaReact } from "react-icons/fa";
-import { RiJavascriptFill, RiLinkedinFill } from "react-icons/ri";
-import { FaNodeJs } from "react-icons/fa";
-import { BiLogoTypescript } from "react-icons/bi";
-import { IoLogoCss3 } from "react-icons/io5";
-import { SiMysql, SiNestjs, SiExpress } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
+import { RiLinkedinFill } from "react-icons/ri";
 import { PiGithubLogoFill } from "react-icons/pi";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
-import "../app/globals.css";
 import Link from "next/link";
 import React from "react";
+import "../app/globals.css";
 
-const frontendSkills = [
-  { icon: <RiJavascriptFill size={50} className="text-yellow-500" />, label: "Javascript" },
-  { icon: <FaReact size={50} className="text-sky-500" />, label: "React JS" },
+// 🧰 Skill Groups
+const skillGroups = [
   {
-    icon: (
-      <svg width="50px" height="50px" viewBox="0 0 256 256" preserveAspectRatio="xMidYMid">
-        <g>
-          <path
-            d="M119.616813,0.0688905149 C119.066276,0.118932037 117.314565,0.294077364 115.738025,0.419181169 C79.3775171,3.69690087 45.3192571,23.3131775 23.7481916,53.4631946 C11.7364614,70.2271045 4.05395894,89.2428829 1.15112414,109.384595 C0.12512219,116.415429 0,118.492153 0,128.025062 C0,137.557972 0.12512219,139.634696 1.15112414,146.665529 C8.10791789,194.730411 42.3163245,235.11392 88.7116325,250.076335 C97.0197458,252.753556 105.778299,254.580072 115.738025,255.680985 C119.616813,256.106338 136.383187,256.106338 140.261975,255.680985 C157.453763,253.779407 172.017986,249.525878 186.382014,242.194795 C188.584164,241.068861 189.00958,240.768612 188.709286,240.518404 C188.509091,240.36828 179.124927,227.782837 167.86393,212.570214 L147.393939,184.922273 L121.743891,146.965779 C107.630108,126.098464 96.0187683,109.034305 95.9186706,109.034305 C95.8185728,109.009284 95.7184751,125.873277 95.6684262,146.465363 C95.5933529,182.52028 95.5683284,183.971484 95.1178886,184.82219 C94.4672532,186.048207 93.9667644,186.548623 92.915738,187.099079 C92.114956,187.499411 91.4142717,187.574474 87.6355816,187.574474 L83.3063539,187.574474 L82.1552297,186.848872 C81.4044966,186.373477 80.8539589,185.747958 80.4785924,185.022356 L79.9530792,183.896422 L80.0031281,133.729796 L80.0782014,83.5381493 L80.8539589,82.5623397 C81.25435,82.0369037 82.1051808,81.3613431 82.7057674,81.0360732 C83.7317693,80.535658 84.1321603,80.4856165 88.4613881,80.4856165 C93.5663734,80.4856165 94.4172043,80.6857826 95.7434995,82.1369867 C96.1188661,82.5373189 110.007429,103.454675 126.623656,128.650581 C143.239883,153.846488 165.962072,188.250034 177.122972,205.139048 L197.392766,235.839522 L198.418768,235.163961 C207.502639,229.259062 217.112023,220.852086 224.719453,212.09482 C240.910264,193.504394 251.345455,170.835585 254.848876,146.665529 C255.874878,139.634696 256,137.557972 256,128.025062 C256,118.492153 255.874878,116.415429 254.848876,109.384595 C247.892082,61.3197135 213.683675,20.9362052 167.288368,5.97379012 C159.105376,3.32158945 150.396872,1.49507389 140.637341,0.394160408 C138.234995,0.143952798 121.693842,-0.131275573 119.616813,0.0688905149 Z"
-            fill="#000000"
-          />
-        </g>
-      </svg>
-    ),
-    label: "Next JS",
+    title: "Programming Languages",
+    icons: [
+      { name: "Python", url: "https://skillicons.dev/icons?i=python" },
+      { name: "Java", url: "https://skillicons.dev/icons?i=java" },
+      { name: "Solidity", url: "https://skillicons.dev/icons?i=solidity" },
+      { name: "HTML", url: "https://skillicons.dev/icons?i=html" },
+      { name: "JavaScript", url: "https://skillicons.dev/icons?i=js" },
+    ],
   },
-  { icon: <BiLogoTypescript size={50} className="text-blue-500" />, label: "Typescript" },
-  { icon: <IoLogoCss3 size={50} className="text-blue-500" />, label: "CSS" },
-];
-
-const backendSkills = [
-  { icon: <FaNodeJs size={45} className="text-green-500" />, label: "Node Js" },
-  { icon: <SiMongodb size={45} className="text-green-500" />, label: "MongoDB" },
-  { icon: <SiExpress size={45} className="text-black" />, label: "Express JS" },
-  { icon: <SiNestjs size={45} className="text-red-600" />, label: "NestJS" },
-  { icon: <SiMysql size={45} className="text-cyan-500" />, label: "MySql" },
+  {
+    title: "Frameworks & Libraries",
+    icons: [
+      { name: "FastAPI", url: "https://skillicons.dev/icons?i=fastapi" },
+      { name: "Flask", url: "https://skillicons.dev/icons?i=flask" },
+      { name: "React", url: "https://skillicons.dev/icons?i=react" },
+      { name: "NodeJS", url: "https://skillicons.dev/icons?i=nodejs" },
+      { name: "Express", url: "https://skillicons.dev/icons?i=express" },
+      { name: "Qt", url: "https://skillicons.dev/icons?i=qt" },
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    icons: [
+      { name: "AWS", url: "https://skillicons.dev/icons?i=aws" },
+      { name: "Docker", url: "https://skillicons.dev/icons?i=docker" },
+      { name: "Nginx", url: "https://skillicons.dev/icons?i=nginx" },
+      { name: "Linux", url: "https://skillicons.dev/icons?i=linux" },
+      { name: "GitHub Actions", url: "https://skillicons.dev/icons?i=githubactions" },
+    ],
+  },
+  {
+    title: "Databases",
+    icons: [
+      { name: "PostgreSQL", url: "https://skillicons.dev/icons?i=postgresql" },
+      { name: "MySQL", url: "https://skillicons.dev/icons?i=mysql" },
+      { name: "MongoDB", url: "https://skillicons.dev/icons?i=mongodb" },
+      { name: "SQLite", url: "https://skillicons.dev/icons?i=sqlite" },
+      { name: "Firebase", url: "https://skillicons.dev/icons?i=firebase" },
+    ],
+  },
+  {
+    title: "Tools & IDEs",
+    icons: [
+      { name: "VSCode", url: "https://skillicons.dev/icons?i=vscode" },
+      { name: "PyCharm", url: "https://skillicons.dev/icons?i=pycharm" },
+      { name: "Android Studio", url: "https://skillicons.dev/icons?i=androidstudio" },
+      { name: "Postman", url: "https://skillicons.dev/icons?i=postman" },
+      { name: "Git", url: "https://skillicons.dev/icons?i=git" },
+      { name: "GitHub", url: "https://skillicons.dev/icons?i=github" },
+    ],
+  },
+  {
+    title: "AI / ML & Data Science",
+    icons: [
+      { name: "OpenCV", url: "https://skillicons.dev/icons?i=opencv" },
+      { name: "TensorFlow", url: "https://skillicons.dev/icons?i=tensorflow" },
+      { name: "PyTorch", url: "https://skillicons.dev/icons?i=pytorch" },
+      { name: "Scikit-Learn", url: "https://skillicons.dev/icons?i=sklearn" },
+    ],
+  },
 ];
 
 const About = React.memo(function About() {
   return (
     <main
-      className="min-h-[calc(100svh-5.03rem)] lg:p-6 p-1 justify-between items-center"
+      className="min-h-[calc(100svh-5.03rem)] lg:p-10 p-4 flex flex-col gap-8 dark:bg-gray-900 dark:text-white"
       id="about"
     >
-      <section className="flex items-center gap-4 pt-3">
+      {/* ======= Header ======= */}
+      <section className="flex items-center gap-4 pt-0 mb-1">
         <hr className="h-1 w-12 bg-gray-600 rounded-full" />
         <p className="text-xl lg:text-2xl font-medium">
-          {" "}
           &lt;About Me &nbsp;/&gt;
         </p>
       </section>
-
-      <section className="flex flex-col-reverse lg:flex-row lg:p-6 p-4 gap-6 mt-6">
-        {/* Left Section */}
+      {/* ======= Main Grid ======= */}
+      <section className="flex flex-col-reverse lg:flex-row lg:p-6 p-4 gap-6">
+        {/* LEFT: Tech Toolbox */}
         <section className="w-full p-2 rounded-xl py-6 lg:py-0.5 shadow-sm flex flex-col max-md:gap-6 card lg:p-4 dark:bg-gray-800">
-          <section className="flex items-center gap-4 h-1/5">
+          <section className="flex items-center gap-4 h-1/5 mb-6 mt-6">
             <hr className="h-1 w-16 bg-gray-600 rounded-full" />
             <p className="text-xl lg:text-2xl font-medium">
               &lt;My Skills &nbsp;/&gt;
             </p>
           </section>
-          <section className="p-2 flex gap-6 justify-center flex-wrap text-lg">
-            {frontendSkills.map((skill) => (
-              <div key={skill.label} className="flex justify-center items-center flex-col">
-                {skill.icon}
-                {skill.label}
-              </div>
-            ))}
-          </section>
 
-          <section className="p-2 flex gap-6 justify-center flex-wrap text-lg">
-            {backendSkills.map((skill) => (
-              <div key={skill.label} className="flex justify-center items-center flex-col">
-                {skill.icon}
-                {skill.label}
+          {skillGroups.map((group) => (
+            <div key={group.title} className="mb-10">
+              <h3 className="text-xl font-semibold mb-4 text-left">{group.title}</h3>
+              <div className="flex flex-wrap justify-start gap-4">
+                {group.icons.map((icon) => (
+                  <div
+                    key={icon.name}
+                    className="relative group transition-transform transform hover:scale-110"
+                  >
+                    <img
+                      src={icon.url}
+                      alt={icon.name}
+                      className="w-6 h-6 sm:w-12 sm:h-12 cursor-pointer"
+                    />
+                    <span className="absolute bottom-[-2rem] left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 text-xs bg-gray-700 text-white rounded-md px-2 py-1 whitespace-nowrap transition-opacity duration-200">
+                      {icon.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-            ))}
-          </section>
+            </div>
+          ))}
         </section>
 
-        {/* Right Section */}
+        {/* RIGHT: About + Socials */}
         <section className="w-full p-3 flex flex-col justify-start gap-4 text-xl rounded-xl py-6 shadow-sm lg:p-6 card dark:bg-gray-800">
           <section className="flex items-center gap-4">
             <hr className="h-1 w-16 bg-gray-700 rounded-full" />
@@ -91,48 +130,46 @@ const About = React.memo(function About() {
             </p>
           </section>
 
-          {/* 🧠 Custom About Me Text */}
-          <p className="lg:text-xl text-lg text-gray-700 dark:text-gray-300 font-normal">
-            Hello! I’m <b>Rohan</b>, a passionate <b>Computer Science Engineering student</b> and 
-            <b> Software Developer</b> with hands-on experience in <b>backend development</b>, 
-            <b> machine learning model deployment</b>, and <b>AWS cloud configuration</b>. 
-            I enjoy designing efficient backend systems and deploying intelligent ML models that solve 
+          {/* Description */}
+          <p className="text-gray-700 dark:text-gray-300 font-normal leading-relaxed">
+            Hello! I’m <b>Rohan</b>, a passionate <b>Computer Science Engineering student</b> and
+            <b> Software Developer</b> with hands-on experience in <b>backend development</b>,
+            <b> machine learning model deployment</b>, and <b>AWS cloud configuration</b>. I enjoy
+            designing efficient backend systems and deploying intelligent ML models that solve
             real-world problems.
           </p>
 
-          <p className="lg:text-xl text-lg text-gray-700 dark:text-gray-300 font-normal">
-            I’m skilled in technologies such as <b>Python, Node.js, Express.js, and MySQL</b>, 
-            along with strong foundations in <b>Java and Android Studio</b> for mobile development. 
-            My interests lie in building scalable applications, integrating cloud services, and 
-            continuously learning new technologies to grow as a full-stack and ML developer.
+          <p className="text-gray-700 dark:text-gray-300 font-normal leading-relaxed">
+            I’m skilled in technologies such as <b>Python, Node.js, Express.js, and MySQL</b>,
+            along with strong foundations in <b>Java and Android Studio</b>. My interests lie in
+            building scalable applications, integrating cloud services, and continuously learning
+            new technologies to grow as a full-stack and ML developer.
           </p>
 
-          <section className="flex max-md:flex-col gap-6 md:items-center">
-            <section className="flex items-center gap-4 mt-3">
-              <a href="https://linkedin.com/in/whorohanpatil" target="_blank" rel="noreferrer">
-                <RiLinkedinFill className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-blue-500 hover:bg-blue-500 p-1.5 hover:text-white" />
-              </a>
-              <a href="https://github.com/RohanCP29" target="_blank" rel="noreferrer">
-                <PiGithubLogoFill className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-black hover:bg-black p-1.5 hover:text-white" />
-              </a>
-              <a href="https://x.com/whorohanpatil" target="_blank" rel="noreferrer">
-                <FaXTwitter className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-black hover:bg-black p-1.5 hover:text-white" />
-              </a>
-              <a href="https://instagram.com/rohanc_patil" target="_blank" rel="noreferrer">
-                <FaInstagram className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-pink-500 hover:bg-pink-500 p-1.5 hover:text-white" />
-              </a>
-            </section>
+          {/* Social Icons */}
+          <section className="flex flex-wrap items-center gap-5 mt-2">
+            <a href="https://linkedin.com/in/whorohanpatil" target="_blank" rel="noreferrer">
+              <RiLinkedinFill className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-blue-500 hover:bg-blue-500 p-1.5 hover:text-white" />
+            </a>
+            <a href="https://github.com/Rohanf4f" target="_blank" rel="noreferrer">
+              <PiGithubLogoFill className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-black hover:bg-black p-1.5 hover:text-white" />
+            </a>
+            <a href="https://x.com/whorohanpatil" target="_blank" rel="noreferrer">
+              <FaXTwitter className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-black hover:bg-black p-1.5 hover:text-white" />
+            </a>
+            <a href="https://instagram.com/rohanc_patil" target="_blank" rel="noreferrer">
+              <FaInstagram className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-pink-500 hover:bg-pink-500 p-1.5 hover:text-white" />
+            </a>
+          </section>
 
-            <section className="flex gap-4">
-              <Link href="mailto:youremail@gmail.com">
-                <button
-                  className="flex items-center px-3 py-2 bg-emerald-700 hover:bg-emerald-800 rounded-md text-white outline-none focus:ring-1 shadow-lg transform active:scale-y-90 transition-transform"
-                >
-                  <IoIosMail size={24} />
-                  <span className="ml-1.5 md:text-lg">Contact</span>
-                </button>
-              </Link>
-            </section>
+          {/* Contact Button */}
+          <section className="flex mt-4">
+            <Link href="mailto:youremail@gmail.com">
+              <button className="flex items-center px-4 py-2 bg-emerald-700 hover:bg-emerald-800 rounded-md text-white shadow-lg transform active:scale-y-90 transition-transform">
+                <IoIosMail size={24} />
+                <span className="ml-2 md:text-lg">Contact</span>
+              </button>
+            </Link>
           </section>
         </section>
       </section>

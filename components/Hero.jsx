@@ -26,11 +26,11 @@ const Hero = () => {
           I am a Software Developer and ML Researcher
         </h2>
         <p className="lg:text-2xl text-lg text-gray-600">
-          I am an enthusiastic Computer Science Engineering student and a dedicated Software Developer
-          with a strong foundation in backend development, machine learning model deployment, 
-          and AWS cloud configuration. My passion lies in designing and building efficient, scalable, 
-          and intelligent systems that solve real-world problems. I enjoy transforming complex ideas 
-          into functional solutions that contribute to both innovation and organizational growth.
+          I’m passionate about building impactful products that solve real-world problems — from scalable FastAPI microservices to AWS cloud automation and machine learning solutions.
+        🚀 Currently: Working at Climatescence Pvt. Ltd., developing an AI-powered Tree Detection System using AWS, FastAPI, S3, and PostgreSQL.
+        🌱 Learning: Cloud-native deployment & ML model optimization.
+        💬 Ask Me About: FastAPI · AWS S3 · PostgreSQL · Docker · QGIS · Blockchain
+        ⚡ Fun Fact: I love combining technology with sustainability 🌿
         </p>
 
         <section className="flex flex-col gap-6">
@@ -47,7 +47,7 @@ const Hero = () => {
             </a>
             {/* Github */}
             <a
-              href="https://github.com/Rohancp29"
+              href="https://github.com/Rohanf4f"
               target="_blank"
               rel="noreferrer"
               aria-label="Goto my github profile"
