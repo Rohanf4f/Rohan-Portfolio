@@ -68,15 +68,15 @@ export const metadata = {
     type: "website",
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/shortcut-icon.png",
-    apple: "/apple-icon.png",
+    icon: "/rohanpatil/rohanpatil.png",
+    shortcut: "/rohanpatil/rohanpatil.png",
+    apple: "/rohanpatil/rohanpatil.png",
   },
   twitter: {
     card: "summary_large_image",
     title: "Rohan Patil – Full Stack Developer | React & Node.js",
     description:
-      "Rohan Patil is a Full Stack Web Developer from Bihar, India. Skilled in JavaScript, React, Node.js, MongoDB, NestJS, and more. Visit portfolio to know more.",
+      "Rohan Patil is a Full Stack Web Developer",
     siteId: "",
     creator: "@whorohanpatil",
     creatorId: "@whorohanpatil",

@@ -103,7 +103,7 @@ const About = () => {
                   Software Developer
                 </h3>
                 <span className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/30 px-3 py-1 rounded-full">
-                  Sept 2025 – Present
+                  Oct 2025 – Present
                 </span>
               </div>
               

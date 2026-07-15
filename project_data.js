@@ -1,7 +1,19 @@
 export const project_data = [
     {
         title: "AGRO NATION",
-        image: "",
+        images: [
+            "AGRO_NATION/1.PNG",
+            "AGRO_NATION/deliver.PNG",
+            "AGRO_NATION/distributerlast.jpg",
+            "AGRO_NATION/manu-details.jpg",
+            "AGRO_NATION/manu-req.jpg",
+            "AGRO_NATION/op.PNG",
+            "AGRO_NATION/raw-ptrans.jpg",
+            "AGRO_NATION/supp-add.jpg",
+            "AGRO_NATION/supp-req.jpg",
+            "AGRO_NATION/supplierdetails.jpg",
+            "AGRO_NATION/trans.jpg",
+        ],
         description:
             "Developed a decentralized web application to manage the supply chain of crops using blockchain technology. The system ensures transparency and traceability in crop distribution by leveraging smart contracts built with Solidity. Farmers can securely record, track, and manage the distribution process through an intuitive React-based interface integrated with MetaMask for blockchain transactions.",
         badges: ["Blockchain", "Solidity", "React", "MetaMask"],
@@ -10,12 +22,15 @@ export const project_data = [
     },
     {
         title: "AGRI INFO",
-        image: "",
+        images: [
+            "AGRI_INFO/1.jpg",
+            "AGRI_INFO/2.jpg",
+            "AGRI_INFO/3.jpg",
+        ],
         description:
             "Developed an Android application designed to assist farmers by automating the validation and verification of farm data. The app generates accurate and actionable insights to support fieldwork and decision-making, helping farmers improve efficiency and maximize crop production.",
         badges: ["Android", "Java", "XML", "Material Design"],
-        github:
-            "https://github.com/Rohanf4f",
+        github: "https://github.com/Rohanf4f",
         live: "",
     },
     {

@@ -28,8 +28,7 @@ const Hero = () => {
         </h2>
         <div className="lg:text-2xl text-lg text-gray-600">
         <div>I’m passionate about building impactful products that solve real-world problems — from scalable FastAPI microservices to AWS cloud automation and machine learning solutions.</div>
-        <div><b>Currently:</b> Developing an AI-powered Tree Detection System using AWS, FastAPI, S3, and PostgreSQL.</div>
-        <div><b>Ask Me About:</b> FastAPI · AWS S3 · PostgreSQL · Docker · QGIS · Blockchain</div>
+        <div><b>Ask Me About:</b> FastAPI · PHP · AWS S3 · PostgreSQL · Docker · Blockchain</div>
         <div><b>Fun Fact:</b> I love combining technology with sustainability 🌿</div>
       </div>
 
@@ -38,7 +37,7 @@ const Hero = () => {
           <section className="flex items-center gap-4 mt-3">
             {/* Linke din */}
             <a
-              href="https://www.linkedin.com/in/whorohanpatil"
+              href="https://www.linkedin.com/in/web-rohan-patil"
               target="_blank"
               rel="noreferrer"
               aria-label="Goto my linkedin profile"
@@ -64,14 +63,14 @@ const Hero = () => {
               <FaXTwitter className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-black hover:bg-black p-1.5 hover:text-white" />
             </a>
             {/* Instagram */}
-            <a
+            {/* <a
               href="https://instagram.com/rohanc_patil"
               target="_blank"
               rel="noreferrer"
               aria-label="Goto my instagram profile"
             >
               <FaInstagram className="bg-white transform hover:-translate-y-1.5 w-12 h-12 rounded-xl duration-500 text-pink-500 hover:bg-pink-500 p-1.5 hover:text-white" />
-            </a>
+            </a> */}
           </section>
           {/* Buttons */}
           <section className="flex gap-4">

@@ -8,7 +8,7 @@ const Footer = () => {
     {
       id: 1,
       name: "Linkedin",
-      link: "https://linkedin.com/in/whorohanpatil",
+      link: "https://linkedin.com/in/web-rohan-patil",
       icon: <FaExternalLinkAlt />,
     },
     {
